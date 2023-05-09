@@ -1,0 +1,11 @@
+{
+  "name": "StringAdvanced",
+  "label": "String advanced",
+  "description": "Extends String package with more custom commands",
+  "group": "",
+  "artifactName": "",
+  "packageVersion": "",
+  "codeVersion": "",
+  "author": "",
+  "commands": []
+}
