@@ -4,10 +4,39 @@
     "description": "Extends String package with more custom commands",
     "group": "com.automationanywhere",
     "artifactName": "A360StringAdvanced",
-    "packageVersion": "1.0.1-20230508-221219",
-    "codeVersion": "1.0.1-20230508-221219",
+    "packageVersion": "1.0.3-20240207-122743",
+    "codeVersion": "1.0.3-20240207-122743",
     "author": "",
     "commands": [
+        {
+            "name": "StringAdvancedCapitalizeFirstLetterOfSentence",
+            "label": "Capitalize First Letter Of Sentence",
+            "description": "Capitalize first letter of sentence",
+            "nodeLabel": "Capitalize First Letter Of Sentence",
+            "allowedAgentTargets": [
+                "WINDOWS"
+            ],
+            "minimumControlRoomVersion": "8750",
+            "minimumBotAgentVersion": "20.11",
+            "mainClass": "com.automationanywhere.CapitalizeFirstLetterOfSentenceCommand",
+            "icon": "string.svg",
+            "returnType": "STRING",
+            "returnSubtype": "UNDEFINED",
+            "returnLabel": "Assign the output to variable",
+            "returnRequired": true,
+            "attributes": [
+                {
+                    "name": "inputString",
+                    "label": "Source string",
+                    "type": "TEXT",
+                    "rules": [
+                        {
+                            "name": "NOT_EMPTY"
+                        }
+                    ]
+                }
+            ]
+        },
         {
             "name": "StringAdvancedProper",
             "label": "Proper",
@@ -38,7 +67,46 @@
             ]
         },
         {
-            "name": "StringAdvancedtoDate",
+            "name": "StringAdvancedRandomLetters",
+            "label": "Random letters",
+            "description": "Generate a string of alphabetic characters and assigns it to a string variable",
+            "nodeLabel": "Random letters",
+            "allowedAgentTargets": [
+                "WINDOWS"
+            ],
+            "minimumControlRoomVersion": "8750",
+            "minimumBotAgentVersion": "20.11",
+            "mainClass": "com.automationanywhere.RandomLettersCommand",
+            "icon": "string.svg",
+            "returnType": "STRING",
+            "returnSubtype": "UNDEFINED",
+            "returnLabel": "Assign the output to variable",
+            "returnRequired": true,
+            "attributes": [
+                {
+                    "name": "length",
+                    "label": "String Length",
+                    "type": "NUMBER",
+                    "rules": [
+                        {
+                            "name": "NOT_EMPTY"
+                        }
+                    ]
+                },
+                {
+                    "name": "uppercase",
+                    "label": "Uppercase",
+                    "type": "BOOLEAN",
+                    "rules": [
+                        {
+                            "name": "NOT_EMPTY"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "StringAdvancedToDate",
             "label": "To date",
             "description": "Converts string to date variable - format ISO_LOCAL_DATE ('2023-05-08')",
             "nodeLabel": "To date",
